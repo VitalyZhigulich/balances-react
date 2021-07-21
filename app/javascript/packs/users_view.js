@@ -1,6 +1,4 @@
-import 'channels'
 import React, { useState, useEffect } from 'react'
-import ReactDOM from 'react-dom'
 import UsersChannel from 'channels/users_channel'
 
 const UsersView = () => {
@@ -38,6 +36,4 @@ const UsersView = () => {
   )
 }
 
-document.addEventListener('DOMContentLoaded', () => {
-  ReactDOM.render(<UsersView />, document.body.appendChild(document.createElement('div')))
-})
+export default UsersView;
