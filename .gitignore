@@ -7,6 +7,16 @@
 # Ignore bundler config.
 /.bundle
 
+# Ignore IDE
+/.idea
+/*.sublime-project
+/*.sublime-workspace
+
+# Ignore RVM gemset
+/.rvmrc
+/.ruby-gemset
+/.ruby-version
+
 # Ignore all logfiles and tempfiles.
 /log/*
 /tmp/*

@@ -6,9 +6,7 @@ const UsersView = () => {
 
   useEffect(() => {
     UsersChannel.received = (data) => {
-      const mergedUsersById = { ...usersById, ...data.users }
-
-      setUsersById(mergedUsersById)
+      setUsersById((oldUsers) => ({ ...oldUsers, ...data.users }))
     }
   }, [])
 
