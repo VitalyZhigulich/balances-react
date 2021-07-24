@@ -12,7 +12,7 @@
 
 ActiveRecord::Schema.define(version: 2021_07_21_142050) do
 
-  create_table "users", charset: "utf8mb4", force: :cascade do |t|
+  create_table "users", charset: "latin1", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.decimal "balance", precision: 15, scale: 2, default: "1000.0"
     t.index ["email"], name: "index_users_on_email", unique: true

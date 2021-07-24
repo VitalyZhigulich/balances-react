@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   namespace :api do
     namespace :v1 do
-      resources :transfers
+      resources :transfers, only: :create
     end
   end
 
