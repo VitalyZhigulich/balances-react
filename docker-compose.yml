@@ -3,21 +3,18 @@ version: '3.7'
 services:
   app:
     build: .
-    command: bundle exec rails s -p 3000 -b '0.0.0.0'
     volumes:
       - ".:/app"
     ports:
       - "3000:3000"
     depends_on:
       - db
-      - webpacker
     environment:
       DB_NAME: app
       DB_USER: user
       DB_PASSWORD: password
       DB_HOST: db
       DB_PORT: 3306
-      WEBPACKER_DEV_SERVER_HOST: webpacker
 
   db:
     image: mysql:5.7
@@ -29,11 +26,3 @@ services:
       MYSQL_PASSWORD: password
     ports:
       - "3306:3306"
-
-  webpacker:
-    build: .
-    command: ./bin/webpack-dev-server
-    volumes:
-      - ".:/app"
-    ports:
-      - "3035:3035"
